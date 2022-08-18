@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <p id="demo"></p>
+    </main>
+    <script>
+        let reply;
+        // yeh (new Date().getDay()) ek function hai.jo shaid computer se he hamari date nikalta hai or 0 is for sunday and then move on to the rest of the weekdays.
+
+        switch(new Date().getDay()){
+            case 0:
+            case 6:
+            reply="It is weekend";
+            break;
+            case 1:       
+            case 2:       
+            case 3:       
+            case 4:       
+            case 5:       
+            reply="soon it will be week end";
+            break;
+        }
+        document.getElementById('demo').innerHTML=`${reply}`;
+
+    </script>
+</body>
+</html>

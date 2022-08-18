@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <p id="apara"></p>
+    </main>
+    <script>
+      let day;
+      switch (new Date().getDay()) {
+        case 0:
+          day = "Good Olll Sunday";
+          break;
+
+        case 1:
+          day = "hectic Monday";
+          break;
+        case 2:
+          day = "Fucked up Tuesday";
+          break;
+        case 3:
+          day = "hmm wednesday";
+          break;
+        case 4:
+          day = "good oll thursday";
+          break;
+
+        case 5:
+          day = "Holy Friday";
+          break;
+        case 6:
+          day = "satooorday";
+          break;
+      }
+      document.getElementById("apara").innerHTML =`Today is  ${day}`;
+    </script>
+  </body>
+</html>
