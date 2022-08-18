@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        h1{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+  </head>
+  <body>
+    <main class="div">
+      <div class="OR">
+        <h1>OR</h1>
+        so || this is OR operator and it searches for first truthy value
+        basicall or mein ek bhi true value ho tu expression true hoti hai.
+      </div>
+      <div class="And">
+        <h1>AND</h1>
+        <p>so And operator searches for first false value and in and operator false has more imporatnce meaning ager ek bhi false aaya tu expression false he hogi.</p>
+
+      </div>
+      <div class="NOT">
+        <h1>NOt </h1>
+        <p>not operation is used to change the boolean value from true to false</p>
+        <p>and double !! is used to convert a string into it's boolean and ! is used to convert the value from true to false and vice versa.</p>
+      </div>
+    </main>
+    <script>
+      let firstName = "";
+      let middleName = "";
+      let lastName = "hasnain shahzad";
+
+      // alert(firstName|| middleName || lastName);
+
+      // alert(!null);
+      alert(!!`${firstName}`);
+    </script>
+  </body>
+</html>

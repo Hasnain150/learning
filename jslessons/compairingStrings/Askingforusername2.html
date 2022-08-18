@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userName;
+      userName = prompt("Who's There", "");
+      if (userName === "" || userName === "null") {
+        alert("Cancel");
+      } else if (userName != "Admin") {
+        alert("I don't Know You!");
+      } else {
+        let passWord = prompt("What is the Password", "");
+        if (passWord === "theMaster") {
+          alert("welcome Admin");
+        } else if (passWord === "" || passWord === "null") {alert("fuck off");}
+        else{
+            alert("cancel");
+        }
+      }
+    </script>
+  </body>
+</html>
