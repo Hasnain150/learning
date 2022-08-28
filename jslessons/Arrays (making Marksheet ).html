@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet</title>
+</head>
+
+<body>
+    
+    
+</body>
+<script>
+    let names = []
+    let num = []
+    let number = prompt("No. of Students");
+    for (let i = 0; i < number; i++) {
+        names.push(prompt("Number " + (i + 1) + " Student Name"))
+        num.push(prompt("Enter the marks of " + names[i]))
+        num[i] = Number.parseInt(num[i])
+    }
+    for (let j = 0; j < number; j++) {
+        console.log(`${names[j]} got  ${num[j]} marks `)
+    }
+    
+</script>
+
+</html>
