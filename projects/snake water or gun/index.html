@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+</body>
+<script>
+    // ask user for s,w,or g;
+    // then computer turn;
+    // tell the user if he won or the computer
+    // let user=prompt("Snake, Water or Gun ");
+    let i = 0;
+    let a = true;
+    let userScore = 0;
+    let compScore = 0;
+    while (a) {
+        let user = prompt(
+            "Snake, Water or Gun "
+        )
+        if (user == "Snake" || user == "Water" || user == "Gun") {
+            if (user == "Snake") {
+                user = 0;
+            }
+            else if (user == "Water") {
+                user = 1;
+            } else if (user == "Gun") {
+                user = 2;
+            }
+            // console.log(user)
+            //user work ends here
+            let cpu = Math.floor(Math.random() * 3);
+            if (cpu == 0) {
+                alert("Computer Chose Snake")
+            } else if (cpu == 1) {
+                alert("Computer Chose Water")
+
+            } else {
+                alert("Computer Chose Gun")
+            }
+            // here cpu will generate 0,1, or 2 as an output.
+            // 0 is snake , 1 is water and 2 is gun
+            if (user == 0) {
+                if (cpu == 0) {
+                    alert("Its a Draw , both are snake")
+                    userScore += 1;
+                    compScore += 1;
+                } else if (cpu == 1) {
+                    alert("You Won , Snake drinks water ")
+                    userScore += 1;
+                } else if (cpu == 2) {
+                    alert("The Computer Won because Gun kills snake")
+                    compScore += 1;
+                }
+            } else if (user == 1) {
+                if (cpu == 0) {
+                    alert("You Lost snake drinks Water")
+                    compScore += 1;
+                } else if (cpu == 1) {
+                    alert("its a draw both are Water")
+                    compScore += 1;
+                    userScore += 1;
+                } else if (cpu == 2) {
+                    alert("You Won because Gun goes inside water")
+                    userScore += 1;
+                }
+            } else if (user == 2) {
+                if (cpu == 0) {
+                    alert("You Won because You killed snake with gun")
+                    userScore += 1;
+                } else if (cpu == 1) {
+                    alert("You Lost bacause Gun goes inside the Water")
+                    compScore += 1;
+                }
+                else if (cpu == 2) {
+                    alert("Its a Draw both choose Gun")
+                    userScore += 1;
+                    compScore += 1;
+                }
+            }
+            a = confirm(
+                "Do you want to play again "
+            )
+        } else {
+            alert("Please Type Correctly")
+            a = confirm(
+                "Do you want to play again "
+            )
+        }
+
+    }
+    alert("Computer Score is " + compScore);
+    alert(
+        "Your Score is " + userScore
+    )
+
+
+
+
+</script>
+
+</html>
